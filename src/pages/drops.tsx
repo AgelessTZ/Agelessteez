@@ -1,9 +1,9 @@
 import React from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Header from '../components/Header'
+import Header from "../components/Header"
 
 function Drops() {
     return (
@@ -20,45 +20,45 @@ function Drops() {
                     <div className="flex justify-center">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 drop-img-column">
                             <ScrollAnimation 
-                                animateIn='animate__bounceInLeft' 
-                                animateOut='animate__fadeOut'
+                                animateIn="animate__bounceInLeft" 
+                                animateOut="animate__fadeOut"
                             >
                                 <div className="item-col">
                                     <div className="item-img-col">
-                                        <img src={'images/post-man.png'} />
+                                        <img src={"images/post-man.png"} />
                                     </div>                                    
                                 </div>
                                 <p className="drop-p-1 text-align mt-3">DROP ONE</p>
                             </ScrollAnimation>
                             <ScrollAnimation 
-                                animateIn='animate__bounceInRight'
-                                animateOut='animate__fadeOut'
+                                animateIn="animate__bounceInRight"
+                                animateOut="animate__fadeOut"
                             >
                                 <div className="item-col">
                                     <div className="bg-trans item-img-col">
-                                        <img src={'images/question.png'}  className="w-1/4" />
+                                        <img src={"images/question.png"}  className="w-1/4" />
                                     </div>
                                 </div>
                                 <p className="drop-p-1 text-align mt-3">DROP TWO</p>
                             </ScrollAnimation>
                             <ScrollAnimation 
-                                animateIn='animate__slideInLeft' 
-                                animateOut='animate__fadeOut'
+                                animateIn="animate__slideInLeft" 
+                                animateOut="animate__fadeOut"
                             >
                                 <div className="item-col">
                                     <div className="bg-trans item-img-col">
-                                        <img src={'images/question.png'} className="w-1/4" />
+                                        <img src={"images/question.png"} className="w-1/4" />
                                     </div>
                                 </div>
                                 <p className="drop-p-1 text-align mt-3">DROP THREE</p>
                             </ScrollAnimation>
                             <ScrollAnimation 
-                                animateIn='animate__slideInRight'
-                                animateOut='animate__fadeOut'
+                                animateIn="animate__slideInRight"
+                                animateOut="animate__fadeOut"
                             >
                                 <div className="item-col">
                                     <div className="bg-trans item-img-col">
-                                        <img src={'images/question.png'} className="w-1/4" />
+                                        <img src={"images/question.png"} className="w-1/4" />
                                     </div>
                                 </div>
                                 <p className="drop-p-1 text-align mt-3">DROP FOUR</p>
@@ -68,23 +68,23 @@ function Drops() {
                 </div>
             </main>
 
-            <footer className="flex justify-center w-full mt-50" style={{ marginTop: '100px' }}>
+            <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
                 <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
                     {/* <ScrollAnimation 
-                        animateIn='animate__fadeInLeft' 
+                        animateIn="animate__fadeInLeft" 
                         animateOut="animate__fadeOutLeft"
                     > */}
                         <div className="footer-icon">
-                            <img src={'images/twitter.png'} className="w-2/4 m-auto" />
+                            <img src={"images/twitter.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/discord.png'} className="w-2/4 m-auto" />
+                            <img src={"images/discord.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/instrgram.png'} className="w-2/4 m-auto" />
+                            <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/boat.png'} className="w-2/4 m-auto" />
+                            <img src={"images/boat.png"} className="w-2/4 m-auto" />
                         </div>
                     {/* </ScrollAnimation> */}
                 </div>

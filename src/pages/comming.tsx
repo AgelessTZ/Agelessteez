@@ -1,9 +1,9 @@
 import React from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Header from '../components/Header';
+import Header from "../components/Header";
 
 function Comming() {
     return (
@@ -16,8 +16,8 @@ function Comming() {
             <main>
                 <Header /> 
                 <ScrollAnimation 
-                    animateIn='animate__fadeInUp' 
-                    animateOut='animate__fadeOutDown'
+                    animateIn="animate__fadeInUp" 
+                    animateOut="animate__fadeOutDown"
                 >
                     <div className="print-h w-full h-screen flex justify-center mt-44">
                         Comming Soon....

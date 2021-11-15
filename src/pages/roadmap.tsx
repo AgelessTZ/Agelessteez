@@ -1,9 +1,9 @@
 import React from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Header from '../components/Header'
+import Header from "../components/Header"
 
 
 function Roadmap() {
@@ -20,8 +20,8 @@ function Roadmap() {
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-5 text-center md:text-left">
                             <ScrollAnimation 
-                                animateIn='animate__fadeInUp' 
-                                animateOut='animate__fadeOutLeft'
+                                animateIn="animate__fadeInUp" 
+                                animateOut="animate__fadeOutLeft"
                             >
                                 <div className="road-title-block">
                                     <p className="color-red">Different design, Every Drop</p>
@@ -43,8 +43,8 @@ function Roadmap() {
                             </ScrollAnimation>
                         </div>
                         <ScrollAnimation 
-                            animateIn='animate__wobble' 
-                            animateOut='animate__fadeOutRight'
+                            animateIn="animate__wobble" 
+                            animateOut="animate__fadeOutRight"
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <div className="fa-y-block">
@@ -63,8 +63,8 @@ function Roadmap() {
                     <div className="drop-block mt-12">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <ScrollAnimation 
-                                animateIn='animate__fadeInLeft' 
-                                animateOut='animate__fadeOutRight'
+                                animateIn="animate__fadeInLeft" 
+                                animateOut="animate__fadeOutRight"
                             >
                                 <div className="f-drop">                                
                                     <div className="grid grid-cols-2 md:grid-cols-2">
@@ -99,8 +99,8 @@ function Roadmap() {
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation 
-                                animateIn='animate__fadeInRight' 
-                                animateOut='animate__fadeOutRight'
+                                animateIn="animate__fadeInRight" 
+                                animateOut="animate__fadeOutRight"
                             >
                                 <div className="s-drop h-full">                                
                                     <div>
@@ -134,8 +134,8 @@ function Roadmap() {
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation 
-                                animateIn='animate__fadeInLeft' 
-                                animateOut='animate__fadeOutLeft'
+                                animateIn="animate__fadeInLeft" 
+                                animateOut="animate__fadeOutLeft"
                             >
                                 <div className="f-drop h-full">                                
                                     <div>
@@ -169,8 +169,8 @@ function Roadmap() {
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation 
-                                animateIn='animate__fadeInRight' 
-                                animateOut='animate__fadeOutRight'
+                                animateIn="animate__fadeInRight" 
+                                animateOut="animate__fadeOutRight"
                             >
                                 <div className="s-drop h-full">                                
                                     <div>
@@ -208,23 +208,23 @@ function Roadmap() {
                 </div>
             </main>
 
-            <footer className="flex justify-center w-full mt-50" style={{ marginTop: '100px' }}>
+            <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
                 <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
                     {/* <ScrollAnimation 
-                        animateIn='animate__fadeInLeft' 
+                        animateIn="animate__fadeInLeft" 
                         animateOut="animate__fadeOutLeft"
                     > */}
                         <div className="footer-icon">
-                            <img src={'images/twitter.png'} className="w-2/4 m-auto" />
+                            <img src={"images/twitter.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/discord.png'} className="w-2/4 m-auto" />
+                            <img src={"images/discord.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/instrgram.png'} className="w-2/4 m-auto" />
+                            <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/boat.png'} className="w-2/4 m-auto" />
+                            <img src={"images/boat.png"} className="w-2/4 m-auto" />
                         </div>
                     {/* </ScrollAnimation> */}
                 </div>

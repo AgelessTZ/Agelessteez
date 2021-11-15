@@ -20,7 +20,7 @@ export default function Header() {
                     <Link href={link.path}>
                         {
                             link.path === "/" ? 
-                                <li key={index} className="ml-8"><img src={'images/logo_color.png'} key={index} className="logo" /></li>: 
+                                <li key={index} className="ml-8"><img src={"images/logo_color.png"} key={index} className="logo" /></li>: 
                                 <li key={index} className="link-item">{link.name}</li>
                         }                
                     </Link>

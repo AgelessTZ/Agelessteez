@@ -1,9 +1,9 @@
 import React from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Header from '../components/Header';
+import Header from "../components/Header";
 
 function Information() {
     return (
@@ -20,8 +20,8 @@ function Information() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4">
                         <div className="col-start-1 col-span-2 pt-6">
                             <ScrollAnimation 
-                                animateIn='animate__fadeInUp' 
-                                animateOut='animate__fadeOut'
+                                animateIn="animate__fadeInUp" 
+                                animateOut="animate__fadeOut"
                             >
                                 <p className="wear-brand">The FIRST ever NFT Streetwear brand</p>
                                 <p className="ageless-text mt-4">
@@ -31,8 +31,8 @@ function Information() {
                             </ScrollAnimation>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-14">
                                 <ScrollAnimation 
-                                    animateIn='animate__fadeInUp' 
-                                    animateOut='animate__fadeOut'
+                                    animateIn="animate__fadeInUp" 
+                                    animateOut="animate__fadeOut"
                                 >
                                     <div className="">
                                         <p className="art-txt text-center md:text-left">
@@ -53,8 +53,8 @@ function Information() {
                                 </ScrollAnimation>
                                 <div className="">
                                     <ScrollAnimation 
-                                        animateIn='animate__fadeInUp' 
-                                        animateOut='animate__fadeOut'
+                                        animateIn="animate__fadeInUp" 
+                                        animateOut="animate__fadeOut"
                                     >
                                         <p className="art-txt text-center md:text-right">
                                             T-Shirts
@@ -78,8 +78,8 @@ function Information() {
                             </div>
                         </div>
                         <ScrollAnimation 
-                            animateIn='animate__fadeInRight' 
-                            animateOut='animate__fadeOut'
+                            animateIn="animate__fadeInRight" 
+                            animateOut="animate__fadeOut"
                             className="h-full"
                         >
                             <div className="col-end-4 col-span-1 h-full mt-5 md:mt-0">                                
@@ -92,8 +92,8 @@ function Information() {
                         </ScrollAnimation>
                     </div>
                     <ScrollAnimation 
-                        animateIn='animate__slideInUp' 
-                        animateOut='animate_fadeOut'
+                        animateIn="animate__slideInUp" 
+                        animateOut="animate_fadeOut"
                         className="h-full"
                     >
                         <div className="btn-block flex items-center md:justify-between px-12 mt-14">
@@ -113,8 +113,8 @@ function Information() {
                     </ScrollAnimation>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14 px-8">
                         <ScrollAnimation 
-                            animateIn='animate__fadeInLeft' 
-                            animateOut='animate_fadeOutLeft'
+                            animateIn="animate__fadeInLeft" 
+                            animateOut="animate_fadeOutLeft"
                             className="h-full"
                         >
                             <div className="bp-block">
@@ -122,8 +122,8 @@ function Information() {
                             </div>  
                         </ScrollAnimation>
                         <ScrollAnimation 
-                            animateIn='animate__fadeInUp' 
-                            animateOut='animate_fadeOut'
+                            animateIn="animate__fadeInUp" 
+                            animateOut="animate_fadeOut"
                             className="h-full"
                         >
                             <div className="bp-txt-block">
@@ -150,7 +150,7 @@ function Information() {
                                     <p className="print-txt">What Is Print Prize Pool?</p>
                                     <p className="print-regular mt-8">
                                         The Print Prize Pool is a prize pool compiled of 10% of all ETH we make. Royalties and Mint. If you or a team of people collect
-                                        <span className="rarity-nt">&nbsp; 4 Print Rarity NFT'S &nbsp;</span>
+                                        <span className="rarity-nt">&nbsp; 4 Print Rarity NFT"S &nbsp;</span>
                                         (Clearly Labeled on Open Sea)
                                     </p>
                                 </div>
@@ -159,16 +159,16 @@ function Information() {
                     </div>                   
                     <div className="rarity-block mt-14">
                         <ScrollAnimation 
-                            animateIn='animate__fadeInLeft' 
-                            animateOut='animate_fadeOutRight'
+                            animateIn="animate__fadeInLeft" 
+                            animateOut="animate_fadeOutRight"
                             className="h-full"
                         >
                             <p className="uti-txt">Rarity</p>
                             <img src={"images/post-man.png"}  className="m-auto mt-10" />
                         </ScrollAnimation>
                         <ScrollAnimation 
-                            animateIn='animate__fadeInRight' 
-                            animateOut='animate_fadeOutLeft'
+                            animateIn="animate__fadeInRight" 
+                            animateOut="animate_fadeOutLeft"
                             className="h-full"
                         >
                             <p className="print-t mt-10">
@@ -182,8 +182,8 @@ function Information() {
                             <img src={"images/rare-nft.png"} className="m-auto mt-14" />
                         </ScrollAnimation>
                         <ScrollAnimation 
-                            animateIn='animate__fadeInLeft' 
-                            animateOut='animate_fadeOutRight'
+                            animateIn="animate__fadeInLeft" 
+                            animateOut="animate_fadeOutRight"
                             className="h-full"
                         >
                             <p className="print-r mt-10">
@@ -200,8 +200,8 @@ function Information() {
                             </div>
                         </ScrollAnimation>
                         <ScrollAnimation 
-                            animateIn='animate__fadeInUp' 
-                            animateOut='animate_fadeOutLeft'
+                            animateIn="animate__fadeInUp" 
+                            animateOut="animate_fadeOutLeft"
                             className="h-full"
                         >
                             <p className="print-c mt-20">COMMON</p>
@@ -213,8 +213,8 @@ function Information() {
                            
                         </ScrollAnimation> 
                         <ScrollAnimation 
-                            animateIn='animate__fadeInUp' 
-                            animateOut='animate_fadeOutRight'
+                            animateIn="animate__fadeInUp" 
+                            animateOut="animate_fadeOutRight"
                             className="h-full"
                         >
                             <p className="print-h mt-14">
@@ -224,23 +224,23 @@ function Information() {
                     </div>                    
                 </div>
             </main>
-            <footer className="flex justify-center w-full mt-50" style={{ marginTop: '100px' }}>
+            <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
                 <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
                     {/* <ScrollAnimation 
-                        animateIn='animate__fadeInLeft' 
+                        animateIn="animate__fadeInLeft" 
                         animateOut="animate__fadeOutLeft"
                     > */}
                         <div className="footer-icon">
-                            <img src={'images/twitter.png'} className="w-2/4 m-auto" />
+                            <img src={"images/twitter.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/discord.png'} className="w-2/4 m-auto" />
+                            <img src={"images/discord.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/instrgram.png'} className="w-2/4 m-auto" />
+                            <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
                         </div>
                         <div className="footer-icon">
-                            <img src={'images/boat.png'} className="w-2/4 m-auto" />
+                            <img src={"images/boat.png"} className="w-2/4 m-auto" />
                         </div>
                     {/* </ScrollAnimation> */}
                 </div>

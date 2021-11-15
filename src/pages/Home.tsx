@@ -36,8 +36,8 @@ const useWindowDimensions = () => {
         setWindowDimensions(getWindowDimensions());
       }
   
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }, [windowDimensions]);
   
     return windowDimensions;
@@ -59,30 +59,30 @@ function Home() {
     return (        
         <div className="home-section">
             <div className="gif-block flex justify-center">
-                <ScrollAnimation animateIn='animate__bounceIn'>
+                <ScrollAnimation animateIn="animate__bounceIn">
                     <img src="images/gif.gif" />
                 </ScrollAnimation>
             </div>
             <div className="slide-block mt-8">
                 <ScrollAnimation 
-                    animateIn='animate__fadeInUp'
+                    animateIn="animate__fadeInUp"
                     className="h-full"
                 >
                     <Slider {...settings}>
                         <div className="item-img">
-                            <img src={'images/1.png'} className="home-slide-img" />
+                            <img src={"images/1.png"} className="home-slide-img" />
                         </div>
                         <div className="item-img">
-                            <img src={'images/2.png'} className="home-slide-img" />
+                            <img src={"images/2.png"} className="home-slide-img" />
                         </div>
                         <div className="item-img">
-                            <img src={'images/3.png'} className="home-slide-img" />
+                            <img src={"images/3.png"} className="home-slide-img" />
                         </div>
                         <div className="item-img">
-                            <img src={'images/4.png'} className="home-slide-img" />
+                            <img src={"images/4.png"} className="home-slide-img" />
                         </div>
                         <div className="item-img">
-                            <img src={'images/5.png'} className="home-slide-img" />
+                            <img src={"images/5.png"} className="home-slide-img" />
                         </div>
                     </Slider>
                 </ScrollAnimation>
