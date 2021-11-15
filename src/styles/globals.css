@@ -199,6 +199,9 @@ body {
 
 .roadmap-section {
     font-family: "ArtegraSans-Bold";
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .bg-trans {
@@ -320,8 +323,47 @@ body {
     margin: auto;
 }
 
+.info-background {
+    opacity: 0.015;
+    background: url(../../public/images/background2.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    margin-top: -4%;
+    /* background-position: bottom; */
+    /* box-shadow: 0px 50px 70px rgba(0,0,0,0.3), 0px 10px 10px rgba(0,0,0,0.1); */
+
+}
+
+/* .info-background::before {
+    content:"";
+    width:inherit;
+    height: 42%;
+    position: absolute;
+    bottom: -42%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3),white);
+    z-index: 1;
+}
+
+.info-background::after {
+    content:"";
+    background-image: inherit;
+    width:inherit;
+    height:40%;
+    position: absolute;
+    bottom:-41%;
+    transform: scaleY(-1);
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.5;
+} */
+
 .info-section {
     padding: 1.9%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .wear-brand {
@@ -423,6 +465,29 @@ body {
     position: absolute;
     /* border-radius: var(--chakra-radii-full); */
     background: rgb(199, 214, 27);
+    opacity: 0.7;
+    filter: blur(5rem);
+    z-index: 0;
+}
+
+.bp-block2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.bp-block2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /* border-radius: var(--chakra-radii-full); */
+    background: rgb(18, 50, 15);
     opacity: 0.7;
     filter: blur(5rem);
     z-index: 0;
@@ -626,5 +691,9 @@ body {
 
     .rele-btn {
         width: 90%;
+    }
+    
+    .animation {
+        animation-name: false !important;
     }
 }

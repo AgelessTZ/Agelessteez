@@ -16,12 +16,16 @@ function Information() {
 
             <main>       
                 <Header /> 
-                <div className="info-section mt-7">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4">
+                {/* <div className="info-background">
+                </div> */}
+                <img src={"images/background2.png"} className="info-background z-0" />
+                <div className="info-section mt-24">                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4">    
                         <div className="col-start-1 col-span-2 pt-6">
                             <ScrollAnimation 
                                 animateIn="animate__fadeInUp" 
                                 animateOut="animate__fadeOut"
+                                className="animation"
                             >
                                 <p className="wear-brand">The FIRST ever NFT Streetwear brand</p>
                                 <p className="ageless-text mt-4">
@@ -33,6 +37,7 @@ function Information() {
                                 <ScrollAnimation 
                                     animateIn="animate__fadeInUp" 
                                     animateOut="animate__fadeOut"
+                                    className="animation"
                                 >
                                     <div className="">
                                         <p className="art-txt text-center md:text-left">
@@ -55,6 +60,7 @@ function Information() {
                                     <ScrollAnimation 
                                         animateIn="animate__fadeInUp" 
                                         animateOut="animate__fadeOut"
+                                        className="animation"
                                     >
                                         <p className="art-txt text-center md:text-right">
                                             T-Shirts
@@ -80,7 +86,7 @@ function Information() {
                         <ScrollAnimation 
                             animateIn="animate__fadeInRight" 
                             animateOut="animate__fadeOut"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <div className="col-end-4 col-span-1 h-full mt-5 md:mt-0">                                
                                 <div className="mo-block">
@@ -94,7 +100,7 @@ function Information() {
                     <ScrollAnimation 
                         animateIn="animate__slideInUp" 
                         animateOut="animate_fadeOut"
-                        className="h-full"
+                        className="h-full animation"
                     >
                         <div className="btn-block flex items-center md:justify-between px-12 mt-14">
                             <div className="rele-btn mt-8 md:mt-0" >
@@ -115,16 +121,21 @@ function Information() {
                         <ScrollAnimation 
                             animateIn="animate__fadeInLeft" 
                             animateOut="animate_fadeOutLeft"
-                            className="h-full"
+                            className="h-full animation"
                         >
-                            <div className="bp-block">
-                                <img src={"images/tm1.png"} className="bp-pic z-10" />
-                            </div>  
+                            <div className="flex">
+                                <div className="bp-block">
+                                    <img src={"images/tm1.png"} className="relative bp-pic z-10" />
+                                </div>  
+                                <div className="bp-block2">
+                                    <img src={"images/tm2.png"} className="relative bp-pic z-10" />
+                                </div>  
+                            </div>
                         </ScrollAnimation>
                         <ScrollAnimation 
                             animateIn="animate__fadeInUp" 
                             animateOut="animate_fadeOut"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <div className="bp-txt-block">
                                 <p className="uti-txt">Utility</p>
@@ -161,7 +172,7 @@ function Information() {
                         <ScrollAnimation 
                             animateIn="animate__fadeInLeft" 
                             animateOut="animate_fadeOutRight"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <p className="uti-txt">Rarity</p>
                             <img src={"images/post-man.png"}  className="m-auto mt-10" />
@@ -169,7 +180,7 @@ function Information() {
                         <ScrollAnimation 
                             animateIn="animate__fadeInRight" 
                             animateOut="animate_fadeOutLeft"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <p className="print-t mt-10">
                                 Print
@@ -184,7 +195,7 @@ function Information() {
                         <ScrollAnimation 
                             animateIn="animate__fadeInLeft" 
                             animateOut="animate_fadeOutRight"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <p className="print-r mt-10">
                                 RARE
@@ -196,13 +207,13 @@ function Information() {
                                 Holding on to these will give you an extremely useful later use!
                             </p>
                             <div className="common-block relative">
-                                <img src={"images/common.png"} className="m-auto" />
+                                <img src={"images/common.png"} className="relative m-auto z-10" />
                             </div>
                         </ScrollAnimation>
                         <ScrollAnimation 
                             animateIn="animate__fadeInUp" 
                             animateOut="animate_fadeOutLeft"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <p className="print-c mt-20">COMMON</p>
                             <p className="print-b-t mt-8">
@@ -215,36 +226,37 @@ function Information() {
                         <ScrollAnimation 
                             animateIn="animate__fadeInUp" 
                             animateOut="animate_fadeOutRight"
-                            className="h-full"
+                            className="h-full animation"
                         >
                             <p className="print-h mt-14">
                                 Holding any rarity of nft will grant you 1 Reserved mint spot in the next drop per nft you own
                             </p>
                         </ScrollAnimation>
                     </div>                    
+                    <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
+                        <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
+                            {/* <ScrollAnimation 
+                                animateIn="animate__fadeInLeft" 
+                                animateOut="animate__fadeOutLeft"
+                            > */}
+                                <div className="footer-icon">
+                                    <img src={"images/twitter.png"} className="w-2/4 m-auto" />
+                                </div>
+                                <div className="footer-icon">
+                                    <img src={"images/discord.png"} className="w-2/4 m-auto" />
+                                </div>
+                                <div className="footer-icon">
+                                    <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
+                                </div>
+                                <div className="footer-icon">
+                                    <img src={"images/boat.png"} className="w-2/4 m-auto" />
+                                </div>
+                            {/* </ScrollAnimation> */}
+                        </div>
+                    </footer>
                 </div>
             </main>
-            <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
-                <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
-                    {/* <ScrollAnimation 
-                        animateIn="animate__fadeInLeft" 
-                        animateOut="animate__fadeOutLeft"
-                    > */}
-                        <div className="footer-icon">
-                            <img src={"images/twitter.png"} className="w-2/4 m-auto" />
-                        </div>
-                        <div className="footer-icon">
-                            <img src={"images/discord.png"} className="w-2/4 m-auto" />
-                        </div>
-                        <div className="footer-icon">
-                            <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
-                        </div>
-                        <div className="footer-icon">
-                            <img src={"images/boat.png"} className="w-2/4 m-auto" />
-                        </div>
-                    {/* </ScrollAnimation> */}
-                </div>
-            </footer>
+           
         </div>
     )
 }

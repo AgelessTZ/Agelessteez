@@ -16,12 +16,14 @@ function Roadmap() {
             </Head>
             <main>
                 <Header /> 
-                <div className="roadmap-section md:px-8 mt-5">
+                <img src={"images/background3.png"} className="info-background z-0" style={{ opacity: "0.01" }} />
+                <div className="roadmap-section md:px-8 mt-32">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-5 text-center md:text-left">
                             <ScrollAnimation 
                                 animateIn="animate__fadeInUp" 
                                 animateOut="animate__fadeOutLeft"
+                                className="animation"
                             >
                                 <div className="road-title-block">
                                     <p className="color-red">Different design, Every Drop</p>
@@ -45,6 +47,7 @@ function Roadmap() {
                         <ScrollAnimation 
                             animateIn="animate__wobble" 
                             animateOut="animate__fadeOutRight"
+                            className="animation"
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <div className="fa-y-block">
@@ -65,6 +68,7 @@ function Roadmap() {
                             <ScrollAnimation 
                                 animateIn="animate__fadeInLeft" 
                                 animateOut="animate__fadeOutRight"
+                                className="animation"
                             >
                                 <div className="f-drop">                                
                                     <div className="grid grid-cols-2 md:grid-cols-2">
@@ -94,13 +98,16 @@ function Roadmap() {
                                         </div>
                                     </div>
                                     <p className="f-t-bottom mt-5">
-                                        All Minters will receive an Exclusive Drop 1 T-Shirt 10% of all funds will be allocated to the prize poolHolders Get Priority Access to Drop 2
+                                        All Minters will receive an Exclusive Drop 1 T-Shirt <br />
+                                        10% of all funds will be allocated to the prize pool<br />
+                                        Holders Get Priority Access to Drop 2
                                     </p>
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation 
                                 animateIn="animate__fadeInRight" 
                                 animateOut="animate__fadeOutRight"
+                                className="animation"
                             >
                                 <div className="s-drop h-full">                                
                                     <div>
@@ -129,13 +136,17 @@ function Roadmap() {
                                         </div>
                                     </div>
                                     <p className="f-t-bottom mt-14">
-                                        All Minters will receive an Exclusive Drop 2 T-Shirt 10% of all funds will be allocated to the prize pool 20% of funds go towards a community orientated decision Holders Get Priority Access to Drop 3
+                                        All Minters will receive an Exclusive Drop 2 T-Shirt <br /> 
+                                        10% of all funds will be allocated to the prize pool <br />
+                                        20% of funds go towards a community orientated decision <br /> 
+                                        Holders Get Priority Access to Drop 3
                                     </p>
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation 
                                 animateIn="animate__fadeInLeft" 
                                 animateOut="animate__fadeOutLeft"
+                                className="animation"
                             >
                                 <div className="f-drop h-full">                                
                                     <div>
@@ -164,13 +175,18 @@ function Roadmap() {
                                         </div>
                                     </div>
                                     <p className="f-t-bottom mt-14">
-                                        All Minters will receive an Exclusive Drop 3 T-Shirt 10% of all funds will be allocated to the print prize pool 10% of funds go towards the Common Prize Pool 30% of funds go towards a community orientated decisionHolders Get Priority Access to Drop 4
+                                        All Minters will receive an Exclusive Drop 3 T-Shirt <br />
+                                        10% of all funds will be allocated to the print prize pool <br />
+                                        10% of funds go towards the Common Prize Pool 30% of funds <br /> 
+                                        go towards a community orientated decisionHolders Get <br />
+                                        Priority Access to Drop 4
                                     </p>
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation 
                                 animateIn="animate__fadeInRight" 
                                 animateOut="animate__fadeOutRight"
+                                className="animation"
                             >
                                 <div className="s-drop h-full">                                
                                     <div>
@@ -199,36 +215,38 @@ function Roadmap() {
                                         </div>
                                     </div>
                                     <p className="f-t-bottom mt-14">
-                                        All Minters will receive an Exclusive Drop 4 T-Shirt 10% of all funds will be allocated to the prize pool 10% of funds go towards the Common Prize Pool 20% of funds go towards a community orientated decision
+                                        All Minters will receive an Exclusive Drop 4 T-Shirt <br /> 
+                                        10% of all funds will be allocated to the prize pool <br />
+                                        10% of funds go towards the Common Prize Pool <br />
+                                        20% of funds go towards a community orientated decision
                                     </p>
                                 </div>
                             </ScrollAnimation>                           
                         </div>
                     </div>
-                </div>
-            </main>
-
-            <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
-                <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
-                    {/* <ScrollAnimation 
-                        animateIn="animate__fadeInLeft" 
-                        animateOut="animate__fadeOutLeft"
-                    > */}
-                        <div className="footer-icon">
-                            <img src={"images/twitter.png"} className="w-2/4 m-auto" />
+                    <footer className="flex justify-center w-full mt-50" style={{ marginTop: "100px" }}>
+                        <div className="flex justify-between w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6">
+                            {/* <ScrollAnimation 
+                                animateIn="animate__fadeInLeft" 
+                                animateOut="animate__fadeOutLeft"
+                            > */}
+                                <div className="footer-icon">
+                                    <img src={"images/twitter.png"} className="w-2/4 m-auto" />
+                                </div>
+                                <div className="footer-icon">
+                                    <img src={"images/discord.png"} className="w-2/4 m-auto" />
+                                </div>
+                                <div className="footer-icon">
+                                    <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
+                                </div>
+                                <div className="footer-icon">
+                                    <img src={"images/boat.png"} className="w-2/4 m-auto" />
+                                </div>
+                            {/* </ScrollAnimation> */}
                         </div>
-                        <div className="footer-icon">
-                            <img src={"images/discord.png"} className="w-2/4 m-auto" />
-                        </div>
-                        <div className="footer-icon">
-                            <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
-                        </div>
-                        <div className="footer-icon">
-                            <img src={"images/boat.png"} className="w-2/4 m-auto" />
-                        </div>
-                    {/* </ScrollAnimation> */}
-                </div>
-            </footer>
+                    </footer>
+                </div>                
+            </main>            
         </div>
     )
 }

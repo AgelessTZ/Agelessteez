@@ -49,18 +49,21 @@ function Home() {
         settings.slidesToShow = 1;
     } else {
         settings.slidesToShow = 3;
-    }
+    } 
     return (        
         <div className="home-section">
             <div className="gif-block flex justify-center">
-                <ScrollAnimation animateIn="animate__bounceIn">
+                <ScrollAnimation 
+                    animateIn="animate__bounceIn"
+                    className="animation"
+                >
                     <img src="images/gif.gif" />
                 </ScrollAnimation>
             </div>
             <div className="slide-block mt-8">
                 <ScrollAnimation 
                     animateIn="animate__fadeInUp"
-                    className="h-full"
+                    className="h-full animation"
                 >
                     <Slider {...settings}>
                         <div className="item-img">

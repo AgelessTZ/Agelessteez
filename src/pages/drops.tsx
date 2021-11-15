@@ -22,6 +22,7 @@ function Drops() {
                             <ScrollAnimation 
                                 animateIn="animate__bounceInLeft" 
                                 animateOut="animate__fadeOut"
+                                className="animation"
                             >
                                 <div className="item-col">
                                     <div className="item-img-col">
@@ -33,6 +34,7 @@ function Drops() {
                             <ScrollAnimation 
                                 animateIn="animate__bounceInRight"
                                 animateOut="animate__fadeOut"
+                                className="animation"
                             >
                                 <div className="item-col">
                                     <div className="bg-trans item-img-col">
@@ -44,6 +46,7 @@ function Drops() {
                             <ScrollAnimation 
                                 animateIn="animate__slideInLeft" 
                                 animateOut="animate__fadeOut"
+                                className="animation"
                             >
                                 <div className="item-col">
                                     <div className="bg-trans item-img-col">
@@ -55,6 +58,7 @@ function Drops() {
                             <ScrollAnimation 
                                 animateIn="animate__slideInRight"
                                 animateOut="animate__fadeOut"
+                                className="animation"
                             >
                                 <div className="item-col">
                                     <div className="bg-trans item-img-col">

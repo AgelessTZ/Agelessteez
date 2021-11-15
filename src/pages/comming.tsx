@@ -18,6 +18,7 @@ function Comming() {
                 <ScrollAnimation 
                     animateIn="animate__fadeInUp" 
                     animateOut="animate__fadeOutDown"
+                    className="animation"
                 >
                     <div className="print-h w-full h-screen flex justify-center mt-44">
                         Comming Soon....
