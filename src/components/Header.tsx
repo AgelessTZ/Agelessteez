@@ -12,7 +12,7 @@ export default function Header() {
     }, [status])
 
   return (
-    <header className="flex justify-center py-5 relative z-99">
+    <header className="flex justify-center py-5 relative z-10">
       <nav className="flex nav-bar">
         {navLinks.map((link, index) => { 
             return (
