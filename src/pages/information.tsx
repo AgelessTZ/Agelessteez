@@ -150,7 +150,7 @@ function Information() {
                                     <p className="print-txt">What Is Print Prize Pool?</p>
                                     <p className="print-regular mt-8">
                                         The Print Prize Pool is a prize pool compiled of 10% of all ETH we make. Royalties and Mint. If you or a team of people collect
-                                        <span className="rarity-nt">&nbsp; 4 Print Rarity NFT"S &nbsp;</span>
+                                        <span className="rarity-nt">&nbsp; 4 Print Rarity NFT&quot;S &nbsp;</span>
                                         (Clearly Labeled on Open Sea)
                                     </p>
                                 </div>
