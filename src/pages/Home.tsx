@@ -44,18 +44,12 @@ const useWindowDimensions = () => {
 }
 
 function Home() {   
-    const size  = useWindowDimensions();
-    // const [window_status, setStatus] = useState(size);
+    const size  = useWindowDimensions();console.log("window-size", size);
     if (size && size.width < 756) {
         settings.slidesToShow = 1;
+    } else {
+        settings.slidesToShow = 3;
     }
-    // useEffect(() => { 
-    //     if (window_status && window_status.width < 756) {
-    //         settings.slidesToShow = 1;
-    //     }
-    //     setStatus(window_status);
-    // }, [window_status])
-
     return (        
         <div className="home-section">
             <div className="gif-block flex justify-center">
