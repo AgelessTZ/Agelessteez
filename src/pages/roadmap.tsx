@@ -16,7 +16,7 @@ function Roadmap() {
             </Head>
             <main>
                 <Header /> 
-                <img src={"images/background3.png"} className="info-background z-0" style={{ opacity: "0.01" }} />
+                <img src={"images/background3.png"} className="info-background z-0" />
                 <div className="roadmap-section md:px-8 mt-32">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-5 text-center md:text-left">

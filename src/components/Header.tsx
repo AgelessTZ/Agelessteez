@@ -12,8 +12,8 @@ export default function Header() {
     }, [status])
 
   return (
-    <header className="flex justify-center py-5 relative z-10">
-      <nav className="flex nav-bar">
+    <header className="flex justify-center py-5 ">
+      <nav className="flex nav-bar relative z-10">
         {navLinks.map((link, index) => { 
             return (
                 <ul className={`ul-${index}`} key={index}>               
