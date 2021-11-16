@@ -82,7 +82,7 @@ function Information() {
                             </div>
                         </div>
                         <ScrollAnimation 
-                            animateIn="animate__fadeInRight" 
+                            animateIn="animate__zoomIn" 
                             animateOut="animate__fadeOut"
                             className="h-full animation"
                         >
