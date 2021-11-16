@@ -15,9 +15,7 @@ function Information() {
             </Head>
 
             <main>       
-                <Header /> 
-                {/* <div className="info-background">
-                </div> */}
+                <Header activeIndex={3} /> 
                 <img src={"images/background2.png"} className="info-background z-0" />
                 <div className="info-section mt-24">                    
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4">    

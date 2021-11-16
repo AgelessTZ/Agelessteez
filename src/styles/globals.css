@@ -65,7 +65,7 @@ body {
     width: 50%;
     margin: auto;
     position: relative;
-    transition: 2s;
+    transition: 0.3s;
 }
 
 .slide-block {
@@ -105,13 +105,15 @@ body {
 }
 
 .slick-slider {
+    width: 100% !important;
     height: 100%;
     display: flex !important;
     align-items: center;
 }
 
 .slick-list {
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     display: flex !important;
     align-items: center;
 }
@@ -619,6 +621,14 @@ body {
 
 .sidenav {
     display: none;
+}
+
+.active {
+    color: #E82020;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 @media(max-width: 768px) {

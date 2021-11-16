@@ -15,7 +15,7 @@ export default function Home() {
         </Head>
 
         <main>       
-            <Header />        
+            <Header activeIndex={2} />        
             <HomePage />
         </main>
      

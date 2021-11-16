@@ -15,7 +15,7 @@ function Drops() {
             </Head>
 
             <main>       
-                <Header />        
+                <Header activeIndex={1} />        
                 <div className="w-full relative mt-16">
                     <div className="flex justify-center">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 drop-img-column">

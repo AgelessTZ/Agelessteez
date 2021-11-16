@@ -14,7 +14,7 @@ function Comming() {
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
             <main>
-                <Header /> 
+                <Header activeIndex={4} /> 
                 <ScrollAnimation 
                     animateIn="animate__fadeInUp" 
                     animateOut="animate__fadeOutDown"

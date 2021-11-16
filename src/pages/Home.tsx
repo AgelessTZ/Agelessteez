@@ -5,16 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    centerMode: true
-};
+
 
 const getWindowDimensions = () => {
     if (typeof window !== "undefined") {
@@ -43,7 +34,17 @@ const useWindowDimensions = () => {
     return windowDimensions;
 }
 
-function Home() {   
+function Home() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        centerMode: true
+    };
     const size  = useWindowDimensions();console.log("window-size", size);
     if (size && size.width < 756) {
         settings.slidesToShow = 1;
