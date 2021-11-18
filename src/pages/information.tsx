@@ -254,7 +254,6 @@ function Information() {
                     </footer>
                 </div>
             </main>
-           
         </div>
     )
 }
