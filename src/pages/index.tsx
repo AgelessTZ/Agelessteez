@@ -25,18 +25,18 @@ export default function Home() {
                     animateIn="animate__fadeInLeft" 
                     animateOut="animate__fadeOutLeft"
                 > */}
-                    <div className="footer-icon">
+                    <a href="https://twitter.com/AgelessTeez" target="_blank" className="footer-icon">
                         <img src={"images/twitter.png"} className="w-2/4 m-auto" />
-                    </div>
-                    <div className="footer-icon">
+                    </a>
+                    <a href="https://discord.gg/xBe4hu4tgp" target="_blank" className="footer-icon">
                         <img src={"images/discord.png"} className="w-2/4 m-auto" />
-                    </div>
-                    <div className="footer-icon">
+                    </a>
+                    <a href="https://www.instagram.com/agelessteez/" target="_blank" className="footer-icon">
                         <img src={"images/instrgram.png"} className="w-2/4 m-auto" />
-                    </div>
-                    <div className="footer-icon">
+                    </a>
+                    {/* <a className="footer-icon">
                         <img src={"images/boat.png"} className="w-2/4 m-auto" />
-                    </div>
+                    </a> */}
                 {/* </ScrollAnimation> */}
             </div>
         </footer>

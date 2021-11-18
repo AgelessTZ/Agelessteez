@@ -16,6 +16,6 @@ export const navLinks = [
     },
     {
       name: "Coming Soon",
-      path: "/comming",
+      path: "/comingsoon",
     },
 ];

@@ -5,7 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import Header from "../components/Header";
 
-function Comming() {
+function Comingsoon() {
     return (
         <div>
             <Head>
@@ -29,4 +29,4 @@ function Comming() {
     )
 }
 
-export default Comming;
+export default Comingsoon;
