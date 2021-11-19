@@ -13,6 +13,16 @@
 }
 
 @font-face {
+    font-family: 'Como-ExtraBold';
+    src:  url('../../public/Fonts/Como/Como-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Como-ExtraLight';
+    src:  url('../../public/Fonts/Como/Como-ExtraLight.eot') format('truetype');
+}
+
+@font-face {
     font-family: 'ArtegraSans-Bold';
     src:  url('../../public/Fonts/Artegra/ArtegraSans-Bold.ttf') format('truetype');
 }
@@ -327,8 +337,6 @@ body {
 
 .info-background {
     opacity: 0.07;
-    background: url(../../public/images/background2.png) no-repeat;
-    background-size: 100% 100%;
     position: relative;
     width: 100%;
     height: 115vh;
@@ -336,6 +344,18 @@ body {
     /* background-position: bottom; */
     /* box-shadow: 0px 50px 70px rgba(0,0,0,0.3), 0px 10px 10px rgba(0,0,0,0.1); */
 
+}
+
+.mint-background {
+    opacity: 0.07;
+    position: relative;
+    width: 100%;
+    height: 115vh;
+    margin-top: -7%;
+    background: url(../../public/images/mint_back.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 130vh;
 }
 
 /* .info-background::before {
@@ -631,6 +651,128 @@ body {
     transform: scale(1.05);
 }
 
+.mint-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.h-n {
+    font-family: "Como-ExtraBold";
+    color: white;
+    font-size: 4rem;
+}
+
+.h-d {
+    color: white;
+    font-family: "Como-Bold";
+    margin-top: -10%;
+}
+
+.imgae-block {
+    padding: 4%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.mint-block {
+    background: rgba(0,0,0,0.3);
+    border: 4px solid #0a0909;
+    border-radius: 8px;
+    font-family: "Como-ExtraBold";
+    color: #E82020;
+    font-size: 4rem;
+}
+
+.t-m {
+    font-family: "Como-Bold";
+    color: white;
+    font-size: 1.7rem;
+}
+
+.opa-20 {
+    opacity: 0.2;
+}
+
+.p-back-part {
+    border-radius: 6px;
+    padding: 3%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    width: 80%;
+    height: 100%;
+}
+
+.p-back {
+    width: 100%;
+    height: 100%;
+    background: #666669;
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 50%) -11px -5px 62px 46px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14%;
+    padding-bottom: 0;
+    padding-top: 26%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.p-mint {
+    width: 55%;
+    margin-left: -25%;
+}
+
+.p-shirt {
+    width: 65%;
+    margin-left: -20%;
+}
+
+.post-part {
+    border-radius: 6px;
+    padding: 3%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    width: 80%;
+    height: 100%;
+    margin-left: -10%;
+}
+
+.p-post-part {
+    width: 100%;
+    height: 100%;
+    background: #38222c;
+    border-radius: 6px;
+    /* box-shadow: rgb(0 0 0 / 50%) -11px -5px 62px 46px inset; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14%;
+    display: flex;
+    align-items: center;
+}
+
+.p-post-part::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: red;
+    opacity: 0.7;
+    filter: blur(3rem);
+    z-index: 0;
+}
+
+.post_man {
+    /* position: relative;
+    top: -75%;
+    z-index: 11; */
+}
+
 @media(max-width: 768px) {
 
     .sidenav {
@@ -709,5 +851,31 @@ body {
     
     .animation {
         animation-name: false !important;
+    }
+
+    .p-back-part {
+        width: 100%;
+    }
+
+    .p-mint {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .p-shirt {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .post-part {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

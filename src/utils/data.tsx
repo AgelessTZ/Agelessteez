@@ -15,7 +15,7 @@ export const navLinks = [
       path: "/information",
     },
     {
-      name: "Coming Soon",
-      path: "/comingsoon",
+      name: "Mint",
+      path: "/mint",
     },
 ];
