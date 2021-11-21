@@ -350,12 +350,10 @@ body {
     opacity: 0.07;
     position: relative;
     width: 100%;
-    height: 115vh;
+    height: 130vh;
     margin-top: -7%;
     background: url(../../public/images/mint_back.png);
     background-size: 100% 100%;
-    width: 100%;
-    height: 130vh;
 }
 
 /* .info-background::before {
@@ -652,10 +650,13 @@ body {
 }
 
 .mint-section {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
+    background: url(../../public/images/mint_back.png) no-repeat;
+    background-size: 100% 100%;
+    height: fit-content;
+    margin-top: -7%;
+    padding-top: 8%;
 }
 
 .h-n {
@@ -670,7 +671,7 @@ body {
     margin-top: -10%;
 }
 
-.imgae-block {
+.image-block {
     padding: 4%;
     padding-top: 0%;
     padding-bottom: 0%;
@@ -683,6 +684,11 @@ body {
     font-family: "Como-ExtraBold";
     color: #E82020;
     font-size: 4rem;
+    transition: 0.5s ease-in;
+}
+
+.mint-block:hover {
+    margin-top: -10px;
 }
 
 .t-m {
@@ -721,12 +727,13 @@ body {
 
 .p-mint {
     width: 55%;
-    margin-left: -25%;
+    margin-left: 0%;
+    position: relative;
 }
 
 .p-shirt {
     width: 65%;
-    margin-left: -20%;
+    margin-left: 0%;
 }
 
 .post-part {
@@ -771,6 +778,32 @@ body {
     /* position: relative;
     top: -75%;
     z-index: 11; */
+}
+
+.mint-circle {
+    margin-top: 9%;
+}
+
+/* .mint-slider .slick-slide, .mint-slider .slick-track {
+    width: 100% !important;
+} */
+
+@media(max-width: 1280px) {
+    .h-n {
+        font-size: 50px;
+    }
+}
+
+@media(min-width: 768px) {
+    .zoom .react-slideshow-container .default-nav:last-of-type {
+        margin-right: -50%;
+        margin-left: 0;
+    }
+    
+    .zoom .react-slideshow-container .default-nav:first-of-type {
+        margin-right: 0;
+        margin-left: -20%;
+    }
 }
 
 @media(max-width: 768px) {
@@ -877,5 +910,35 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .mint-background {
+        background: none;
+    }    
+
+    .h-n {
+        font-size: 90px;
+    }
+
+    .mint-section {
+        background: none;
+    }
+}
+
+@media(max-width: 600px) {
+    .h-n {
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 500px) {
+    .h-n {
+        font-size: 60px;
+    }
+}
+
+@media(max-width: 400px) {
+    .h-n {
+        font-size: 50px;
     }
 }
