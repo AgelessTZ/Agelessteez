@@ -16,7 +16,7 @@ function Roadmap() {
             </Head>
             <main>
                 <Header activeIndex={0} /> 
-                <img src={"images/background3.png"} className="info-background z-0" />
+                <img src={"images/background3.png"} className="info-background z-0"  style={{ height: '132vh' }} />
                 <div className="roadmap-section md:px-8 mt-32">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="p-5 text-center md:text-left">
@@ -33,13 +33,13 @@ function Roadmap() {
                                 <div className="road-text-block mt-14">
                                     <p className="">Our project’s goal is to look long term.</p>
                                     <p className="mt-4">
-                                        With the metaverse starting to come to life, crypto being adopted at rates never seen before. It is only a matter of time before we begin to see yuor favorite brands being used all across the metaverse. So why not join in on this early?
+                                        With the metaverse starting to come to life, crypto is being adopted at rates never seen before. It is only a matter of time before we begin to see your favorite brands being used all across the metaverse. So why not join in on this early?
                                     </p>
                                     <p className="mt-4">
-                                        Skins and Cosmetics are already a multi-billion dollar industry and the use for these cosmetics are only within one game or one developers gameverse. Could you imagine when every game is able to be played on one metaverse. Your cosmetics will be less looked at as cosmetics and just clothes.
+                                    Currently, Gaming Skins and Cosmetics are a multi-billion dollar industry. A lot of people may not know that these Skins and Cosmetics are technically NFT’s, you own a piece of art that your ingame character wears or uses. However, the use for these cosmetics are only within one game or one developer's gameverse. Could you imagine when every game is able to be played on one metaverse. Your cosmetics will be less looked at as cosmetics and just clothes.
                                     </p>
                                     <p className="mt-4">
-                                        That’s what we are striving for in the long term.THE streetwear brand of the metaverse.
+                                        That’s what we are striving for in the long term.&nbsp;THE streetwear brand of the metaverse.
                                     </p>
                                 </div>
                             </ScrollAnimation>

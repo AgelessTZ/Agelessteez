@@ -46,7 +46,7 @@ function Home() {
         centerMode: true
     };
     const size  = useWindowDimensions();console.log("window-size", size);
-    if (size && size.width < 756) {
+    if (size && size.width < 768) {
         settings.slidesToShow = 1;
     } else {
         settings.slidesToShow = 3;
@@ -64,7 +64,7 @@ function Home() {
             <div className="slide-block mt-8">
                 <ScrollAnimation 
                     animateIn="animate__fadeInUp"
-                    className="h-full animation"
+                    className="h-full animation slide-part"
                 >
                     <Slider {...settings}>
                         <div className="item-img">
@@ -83,7 +83,10 @@ function Home() {
                             <img src={"images/5.png"} className="home-slide-img" />
                         </div>
                     </Slider>
-                </ScrollAnimation>
+                </ScrollAnimation>                
+            </div>
+            <div className="mobile-img">
+                <img src={"images/back_mobile.png"} className="back-mobile" />
             </div>
             
         </div>

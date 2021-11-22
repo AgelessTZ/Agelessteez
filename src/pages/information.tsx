@@ -160,7 +160,7 @@ function Information() {
                                     <p className="print-regular mt-8">
                                         The Print Prize Pool is a prize pool compiled of 10% of all ETH we make. Royalties and Mint. If you or a team of people collect
                                         <span className="rarity-nt">&nbsp; 4 Print Rarity NFT&quot;S &nbsp;</span>
-                                        (Clearly Labeled on Open Sea)
+                                        (Clearly Labeled on Open Sea) you or your team will receive all 10% of the funds collected!
                                     </p>
                                 </div>
                             </div>
@@ -168,18 +168,19 @@ function Information() {
                     </div>                   
                     <div className="rarity-block mt-14">
                         <ScrollAnimation 
-                            animateIn="animate__fadeInLeft" 
-                            animateOut="animate_fadeOutRight"
+                            animateIn="animate__fadeInUp" 
+                            animateOut="animate_fadeOutUp"
                             className="h-full animation"
                         >
                             <p className="uti-txt">Rarity</p>
-                            <img src={"images/post-man.png"}  className="m-auto mt-10" />
+                            
                         </ScrollAnimation>
                         <ScrollAnimation 
                             animateIn="animate__fadeInRight" 
                             animateOut="animate_fadeOutLeft"
                             className="h-full animation"
                         >
+                            <img src={"images/post-man.png"}  className="m-auto mt-10" />
                             <p className="print-t mt-10">
                                 Print
                             </p>
@@ -187,14 +188,14 @@ function Information() {
                                 The Print Rarity NFT is 1 of 1 <br /> 
                                 It is the design for the T-shirt in it’s collection <br />
                                 Collecting 4 of these will grant you access to the print prize pool!
-                            </p>
-                            <img src={"images/rare-nft.png"} className="m-auto mt-14" />
+                            </p>                            
                         </ScrollAnimation>
                         <ScrollAnimation 
                             animateIn="animate__fadeInLeft" 
                             animateOut="animate_fadeOutRight"
                             className="h-full animation"
                         >
+                            <img src={"images/rare-nft.png"} className="m-auto mt-14" />
                             <p className="print-r mt-10">
                                 RARE
                             </p>
@@ -204,22 +205,22 @@ function Information() {
                                 These Each are made up of a hand drawn Woman by the Ujala <br /><br />
                                 Holding on to these will give you an extremely useful later use!
                             </p>
-                            <div className="common-block relative">
-                                <img src={"images/common.png"} className="relative m-auto z-10" />
-                            </div>
+                            
                         </ScrollAnimation>
                         <ScrollAnimation 
                             animateIn="animate__fadeInUp" 
                             animateOut="animate_fadeOutLeft"
                             className="h-full animation"
                         >
+                            <div className="common-block relative">
+                                <img src={"images/common.png"} className="relative m-auto z-10" />
+                            </div>
                             <p className="print-c mt-20">COMMON</p>
                             <p className="print-b-t mt-8">
                                 In Drop One there are only 19 Common NFT’s <br />
                                 The common NFT’s were randomly generated using Hand Drawn Traits by Ujala <br /><br />
                                 Holding on to these will allow you to claim money from the prize pool after drop 4
-                            </p>
-                           
+                            </p>                           
                         </ScrollAnimation> 
                         <ScrollAnimation 
                             animateIn="animate__fadeInUp" 
