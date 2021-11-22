@@ -208,7 +208,7 @@ function Information() {
                             
                         </ScrollAnimation>
                         <ScrollAnimation 
-                            animateIn="animate__fadeInUp" 
+                            animateIn="animate__fadeInRight" 
                             animateOut="animate_fadeOutLeft"
                             className="h-full animation"
                         >
