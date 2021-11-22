@@ -20,7 +20,7 @@ const BUILDSPACE_TWITTER_LINK = `https://twitter.com/${BUILDSPACE_TWITTER_HANDLE
 const TWITTER_HANDLE = 'andreasbigger';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const CONTRACT_ADDRESS = TESTNET_SITE ?
-  "0xee908e7170d32fFee43272129C849f6c07c10fDf" :
+  "0x0bCABF44a1bF9106C6Bf414147f431aD4692078E" :
   "0x0"
 ;
 const CONTRACT_ABI = abi.abi;
@@ -182,14 +182,39 @@ function Mint() {
 				try {
                     // @ts-ignore
 					const now = parseInt((new Date()).getTime() / 1000);
-					if (presaleStartDate <= now && now < publicStartDate) {
+                    if ( now < presaleStartDate ) {
+                        toast.error(<>Sorry, Presale Minting is not started.</>, {
+                            position: "top-left",
+                            autoClose: 5000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                        });
+                    } else if (presaleStartDate <= now && now < publicStartDate) {
 						const gasPrice = await provider.getGasPrice();
 						const res = await connectedContract.preSaleMint({value : price.toString(), gasPrice : gasPrice.toString()});
 						// console.log(res);
+                        toast.success(<>You have minted successfully.</>, {
+                            position: "top-left",
+                            autoClose: 3000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                        });
 					} else {
 						const gasPrice = await provider.getGasPrice();
 						const res = await connectedContract.mint({value : price.toString(), gasPrice : gasPrice.toString()});
 						// console.log(res);
+                        toast.success(<>You have minted successfully.</>, {
+                            position: "top-left",
+                            autoClose: 3000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                        });
 					}
 					setIsMinting(false);
 				} catch (er) {
@@ -298,34 +323,24 @@ function Mint() {
                                 <ScrollAnimation 
                                     animateIn="animate__fadeInUp" 
                                     animateOut="animate_fadeOutLeft"
-                                    className="h-full animation"
+                                    className="h-full animation flex items-center justify-center md:justify-end"
                                 >
-                                    <div className="flex flex-col justify-center items-center md:items-end">                                    
-                                        <div className="w-4/6 relative flex">
-                                            <img src={"images/mint_circle.png"} className="w-full" />
-                                            <div className="absolute w-full flex flex-col justify-center items-center top-0 left-0">
-                                                <div className="relative w-full flex justify-center items-center flex-col mint-circle">
-                                                    <p className="h-n">{ timeLeft.days }</p>
-                                                    <p className="h-d">Days</p>
-                                                </div>
-                                            </div>
-                                        </div>                                    
+                                    <div className="circle-block">                                    
+                                        <div className="relative h-full flex justify-center items-center flex-col mint-circle">
+                                            <p className="h-n">{ timeLeft.days }</p>
+                                            <p className="h-d">Days</p>
+                                        </div>
                                     </div>
                                 </ScrollAnimation>
                                 <ScrollAnimation 
                                     animateIn="animate__fadeInDown" 
                                     animateOut="animate_fadeOutUp"
-                                    className="h-full animation"
+                                    className="h-full animation flex items-center justify-center"
                                 >
-                                    <div className="flex flex-col justify-center items-center">
-                                        <div className="w-4/6 relative flex">
-                                            <img src={"images/mint_circle.png"} className="w-full" />
-                                            <div className="absolute w-full flex flex-col justify-center items-center top-0 left-0">
-                                                <div className="relative w-full flex justify-center items-center flex-col mint-circle">
-                                                    <p className="h-n">{ timeLeft.hours }</p>
-                                                    <p className="h-d">Hours</p>
-                                                </div>
-                                            </div>
+                                    <div className="circle-block">
+                                        <div className="relative h-full flex justify-center items-center flex-col mint-circle">
+                                            <p className="h-n">{ timeLeft.hours }</p>
+                                            <p className="h-d">Hours</p>
                                         </div>
                                     </div>
                                 </ScrollAnimation>
@@ -361,34 +376,24 @@ function Mint() {
                                 <ScrollAnimation 
                                     animateIn="animate__fadeInDown" 
                                     animateOut="animate_fadeOutUp"
-                                    className="h-full animation"
+                                    className="h-full animation flex items-center justify-center"
                                 >
-                                    <div className="flex flex-col justify-center items-center">
-                                        <div className="w-4/6 relative flex">
-                                            <img src={"images/mint_circle.png"} className="w-full" />
-                                            <div className="absolute w-full flex flex-col justify-center items-center top-0 left-0">
-                                                <div className="relative w-full flex justify-center items-center flex-col mint-circle">
-                                                    <p className="h-n">{ timeLeft.minutes }</p>
-                                                    <p className="h-d">Minutes</p>
-                                                </div>
-                                            </div>
+                                    <div className="circle-block">
+                                        <div className="relative h-full flex justify-center items-center flex-col mint-circle">
+                                            <p className="h-n">{ timeLeft.minutes }</p>
+                                            <p className="h-d">Minutes</p>
                                         </div>
                                     </div>
                                 </ScrollAnimation>
                                 <ScrollAnimation 
                                     animateIn="animate__fadeInUp" 
                                     animateOut="animate_fadeOutLeft"
-                                    className="h-full animation"
+                                    className="h-full animation h-full animation flex items-center justify-center md:justify-start"
                                 >
-                                    <div className="flex flex-col justify-center items-center md:items-start">
-                                        <div className="w-4/6 relative flex">
-                                            <img src={"images/mint_circle.png"} className="w-full" />
-                                            <div className="absolute w-full flex flex-col justify-center items-center top-0 left-0">
-                                                <div className="relative w-full flex justify-center items-center flex-col mint-circle">
-                                                    <p className="h-n">{ timeLeft.seconds }</p>
-                                                    <p className="h-d">Seconds</p>
-                                                </div>
-                                            </div>
+                                    <div className="circle-block">
+                                        <div className="relative h-full flex justify-center items-center flex-col mint-circle">
+                                            <p className="h-n">{ timeLeft.seconds }</p>
+                                            <p className="h-d">Seconds</p>
                                         </div>
                                     </div>
                                 </ScrollAnimation>
@@ -410,7 +415,7 @@ function Mint() {
                                 ) : null}
                                 {DEPLOYED_CHAINS.includes(chainId) ? (
                                     <div className="t-m">
-                                        <span className="t-m">{currMintCount}/{maxMintCount}</span> Queens have been minted!
+                                        <span className="t-m">{currMintCount}/{maxMintCount}</span> Teez have been minted!
                                     </div>
                                 ) : null}
                             </div>
@@ -428,63 +433,32 @@ function Mint() {
                                                 <img src={"images/mint_man_back.png"} />
                                             </div>
                                             <div className="p-back">
-                                                <img src={"images/mint_man_back.png"} />
+                                                <img src={"images/mint_man.png"} />
                                             </div>
-                                            <div className="p-back">
-                                                <img src={"images/mint_man_back.png"} />
+                                            <div className="p-back shirt">
+                                                <img src={"images/mint_shirt.png"} />
+                                            </div>
+                                            <div className="p-back shirt">
+                                                <img src={"images/mint_shirt_1.png"} />
                                             </div>
                                         </Slide>
                                     </div>                               
                                 </div>           
                             </ScrollAnimation>    
-                            <ScrollAnimation 
-                                animateIn="animate__zoomIn" 
-                                animateOut="animate_zoomOut"
-                                className="h-full animation flex justify-center items-end"
-                            >  
-                                <div className="p-mint">
-                                    <Zoom scale={0.4} className="w-full zoom">              
-                                        <div className="relative w-full flex justify-center">                      
-                                            <img src={"images/mint_man.png"} />
-                                        </div>
-                                        <div className="relative w-full flex justify-center">   
-                                            <img src={"images/mint_man.png"} />
-                                        </div>
-                                        <div className="relative w-full flex justify-center">   
-                                            <img src={"images/mint_man.png"} />     
-                                        </div>                               
-                                    </Zoom>
-                                </div>
-                            </ScrollAnimation>
-                            <ScrollAnimation 
-                                animateIn="animate__zoomIn" 
-                                animateOut="animate_zoomOut"
-                                className="h-full animation flex justify-start items-center pt-8"
-                            >  
-                                <div className="p-shirt relative">
-                                    <Fade className="w-full"> 
-                                        <div className="relative w-full flex justify-center">
-                                            <img src={"images/mint_shirt.png"} />
-                                        </div>
-                                        <div className="relative w-full flex justify-center">
-                                            <img src={"images/mint_shirt.png"} />
-                                        </div>
-                                        <div className="relative w-full flex justify-center">
-                                            <img src={"images/mint_shirt.png"} />
-                                        </div>
-                                    </Fade>
-                                </div>
-                            </ScrollAnimation>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
                             <ScrollAnimation 
                                 animateIn="animate__fadeInRight" 
                                 animateOut="animate_fadeOutRight"
                                 className="h-full animation flex justify-start items-center"
                             >  
-                            <div className="post-part relative mt-14 md:mt-0">
-                                <div className="p-post-part relative">   
-                                    <img src={"images/post_man.png"} className="post_man z-10" />                                 
-                                </div>                                
-                            </div>
+                                <div className="post-part relative mt-14 md:mt-0">
+                                    <div className="p-post-part relative">   
+                                        <img src={"images/post_man.png"} className="post_man z-10" />                                 
+                                    </div>                                
+                                </div>
                             </ScrollAnimation>
                         </div>
                         <footer className="flex justify-center w-full" style={{ marginTop: "40px" }}>

@@ -663,6 +663,7 @@ body {
     font-family: "Como-ExtraBold";
     color: white;
     font-size: 4rem;
+    line-height: 4.5rem;
 }
 
 .h-d {
@@ -715,14 +716,17 @@ body {
     background: #666669;
     border-radius: 6px;
     box-shadow: rgb(0 0 0 / 50%) -11px -5px 62px 46px inset;
-    display: flex;
     justify-content: center;
-    align-items: center;
     padding: 14%;
     padding-bottom: 0;
     padding-top: 26%;
     display: flex;
     align-items: flex-end;
+}
+
+.shirt {
+    align-items: center;
+    padding: 14%;
 }
 
 .p-mint {
@@ -742,7 +746,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.7);
     width: 80%;
     height: 100%;
-    margin-left: -10%;
 }
 
 .p-post-part {
@@ -780,19 +783,23 @@ body {
     z-index: 11; */
 }
 
+.circle-block {
+    padding: 3px;
+    width: 135px;
+    height: 135px;
+    background: linear-gradient(to right, red, purple);
+    border-radius: 50%;
+}
+
 .mint-circle {
-    margin-top: 9%;
+    background: #120f11;
+    border-radius: 50%;
 }
 
 /* .mint-slider .slick-slide, .mint-slider .slick-track {
     width: 100% !important;
 } */
 
-@media(max-width: 1280px) {
-    .h-n {
-        font-size: 50px;
-    }
-}
 
 @media(min-width: 768px) {
     .zoom .react-slideshow-container .default-nav:last-of-type {
@@ -917,28 +924,10 @@ body {
     }    
 
     .h-n {
-        font-size: 90px;
+        font-size: 70px;
     }
 
     .mint-section {
         background: none;
-    }
-}
-
-@media(max-width: 600px) {
-    .h-n {
-        font-size: 80px;
-    }
-}
-
-@media(max-width: 500px) {
-    .h-n {
-        font-size: 60px;
-    }
-}
-
-@media(max-width: 400px) {
-    .h-n {
-        font-size: 50px;
     }
 }
