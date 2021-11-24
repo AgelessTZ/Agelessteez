@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^0.3.4",
     "@types/react-animate-on-scroll": "^2.1.4",
     "animate.css": "^4.1.1",
     "ethers": "^5.5.1",
@@ -17,11 +18,23 @@
     "react": "17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "17.0.2",
+    "react-modal": "^3.14.4",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-slick": "^0.28.1",
     "react-slideshow-image": "^3.6.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "@apollo/client": "^3.0.2",
+    "@hapi/iron": "6.0.0",
+    "apollo-server-micro": "^2.14.2",
+    "cookie": "^0.4.1",
+    "graphql": "^14.0.2",
+    "moment": "^2.27.0",
+    "prop-types": "^15.6.2",
+    "serverless-mysql": "^1.5.4",
+    "uuid": "8.1.0",
+    "axios": "^0.23.0",
+    "got": "^11.8.2"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",

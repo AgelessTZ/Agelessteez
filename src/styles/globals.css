@@ -804,6 +804,11 @@ body {
     display: none;
 }
 
+.modal-input {
+    height: 37px;
+    border: 1px solid gray;
+    padding: 10px;
+}
 
 @media(min-width: 768px) {
     .zoom .react-slideshow-container .default-nav:last-of-type {
