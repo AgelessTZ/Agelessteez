@@ -6,7 +6,9 @@ export const typeDefs = gql`
     mintToken: String
     firstName: String
     lastName: String
+    email: String
     walletAddress: String
+    discordId: String
     country: String
     city: String
     province: String
@@ -18,7 +20,9 @@ export const typeDefs = gql`
     mintToken: String
     firstName: String
     lastName: String
+    email: String
     walletAddress: String
+    discordId: String
     country: String
     city: String
     province: String

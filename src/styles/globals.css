@@ -810,6 +810,11 @@ body {
     padding: 10px;
 }
 
+.validation-txt {
+    font-size: 15px;
+    margin-top: 7px;
+}
+
 @media(min-width: 768px) {
     .zoom .react-slideshow-container .default-nav:last-of-type {
         margin-right: -50%;

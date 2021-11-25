@@ -21,14 +21,16 @@ import Header from "../components/Header";
 const TESTNET_SITE = true;
 
 const InsertUserData = gql`
-  mutation InsertUserData($mintToken: String, $firstName: String, $lastName: String, $walletAddress: String, $country: String, $city: String, $province: String, $postalCode: String, $clothingSize: String) {
-    insertUserData(input: { mintToken: $mintToken, firstName: $firstName, lastName: $lastName, walletAddress: $walletAddress, country: $country, city: $city, province: $province, postalCode: $postalCode, clothingSize: $clothingSize }) {
+  mutation InsertUserData($mintToken: String, $firstName: String, $lastName: String, $email: String, $walletAddress: String, $discordId: String, $country: String, $city: String, $province: String, $postalCode: String, $clothingSize: String) {
+    insertUserData(input: { mintToken: $mintToken, firstName: $firstName, lastName: $lastName, email: $email, walletAddress: $walletAddress, discordId: $discordId, country: $country, city: $city, province: $province, postalCode: $postalCode, clothingSize: $clothingSize }) {
         mintUser {
             id
             mintToken
             firstName
             lastName
+            email
             walletAddress
+            discordId
             country
             city
             province
@@ -335,58 +337,104 @@ function Mint() {
 		return () => clearInterval(interval);
 	}, [isAppInited])
 
-    const [showModal, setShowModal] = useState(false);    
+    const [showModal, setShowModal] = useState(false);  
+
     const [firstName, setFirstName] = useState("");
+    const [firstNameStatus, setFirstNameStatus] = useState(true);
+
     const [lastName, setLastName] = useState("");
+    const [lastNameStatus, setLastNameStatus] = useState(true);
+
+    const [email, setEmail] = useState("");
+    const [emailStatus, setEmailStatus] = useState(true);
+    const [emailCheck, setEmailCheck] = useState(true);
+
     const [walletAddress, setWalletAddress] = useState("");
+    const [walletAddressStatus, setWalletAddressStatus] = useState(true);
+
     const [country, setCountry] = useState("Afganistan");
+
     const [city, setCity] = useState("");
+    const [cityStatus, setCityStatus] = useState(true);
+
     const [province, setProvince] = useState("");
+    const [provinceStatus, setProvinceStatus] = useState(true);
+
     const [postalCode, setPostalCode] = useState("");
+    const [postalCodeStatus, setPostalCodeStatus] = useState(true);
+
+    const [discordId, setDiscordId] = useState("");
+    const [discordIdStatus, setDiscordIdStatus] = useState(true);
+
     const [clothingSize, setClothesSize] = useState("S");
 
 
     const onUserFormSubmit = async () => {
+        let validation = true;
+
         if (firstName === "") {
-            toast.error(<>Please insert your FirstName.</>, {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-        } else if (lastName === "") {
-            toast.error(<>Please insert your LastName.</>, {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-        } else if (walletAddress === "") {
-            toast.error(<>Please insert your WalletAddress.</>, {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-        } else if (walletAddress.slice(0, 2) !== "0x") {
-            toast.error(<>Your walletAddress is invalid.</>, {
-                position: "top-left",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-        } else { console.log("submit", country)
-            
+            setFirstNameStatus(false);
+            validation = false;
+        }
+
+        if (lastName === "") {
+            setLastNameStatus(false);
+            validation = false;
+        } 
+
+        if (email === "") {
+            setEmailStatus(false);
+            validation = false;
+        }
+
+        if (email) {
+            let lastAtPos = email.lastIndexOf("@");
+            let lastDotPos = email.lastIndexOf(".");
+      
+            if (
+              !(
+                lastAtPos < lastDotPos &&
+                lastAtPos > 0 &&
+                email.indexOf("@@") == -1 &&
+                lastDotPos > 2 &&
+                email.length - lastDotPos > 2
+              )
+            ) { console.log("email invalid")
+              setEmailCheck(false);
+              validation = false;
+            } else {
+                setEmailCheck(true);
+            }
+        }
+
+        // if (discordId === "") {
+        //     setDiscordIdStatus(false);
+        //     validation = false
+        // }
+
+        if (walletAddress === "") {
+            setWalletAddressStatus(false);
+            validation = false;
+        } 
+
+        if (city === "") {
+            setCityStatus(false);
+            validation = false;
+        }
+        
+        if (province === "") {
+            setProvinceStatus(false);
+            validation = false;
+        }
+
+        if (postalCode === "") { 
+            setPostalCodeStatus(false);
+            validation = false;
+        }
+        
+        if (validation) { console.log("here")            
             let result = await insertUserData({variables: {
-                mintToken: '', firstName, lastName, walletAddress, country, city, province, postalCode, clothingSize
+                mintToken: '', firstName, lastName, email, walletAddress, discordId, country, city, province, postalCode, clothingSize
             }});
             
             if (result) {
@@ -401,27 +449,56 @@ function Mint() {
             }
 
             setFirstName("");
+            setFirstNameStatus(true);
             setLastName("");
+            setLastNameStatus(true);
+            setEmail("");
+            setEmailCheck(true);
+            setEmailStatus(true);
             setWalletAddress("");
+            setWalletAddressStatus(true);
             setCountry("Afganistan");
             setClothesSize("S");
             setCity("");
+            setCityStatus(true)
             setProvince("");
+            setProvinceStatus(true);
             setPostalCode("");
-            setShowModal(false)
+            setPostalCodeStatus(true);
+            setDiscordId("");
+            setShowModal(false);
+        } else {
+            toast.error(<>Please enter all valid information</>, {
+				position: "top-left",
+				autoClose: 5000,
+				hideProgressBar: true,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+			});
         }
         
     }
 
     const closeModal = () => { 
         setFirstName("");
+        setFirstNameStatus(true);
         setLastName("");
+        setLastNameStatus(true);
+        setEmail("");
+        setEmailCheck(true);
+        setEmailStatus(true);
         setWalletAddress("");
+        setWalletAddressStatus(true);
         setCountry("Afganistan");
         setClothesSize("S");
         setCity("");
+        setCityStatus(true)
         setProvince("");
+        setProvinceStatus(true);
         setPostalCode("");
+        setPostalCodeStatus(true);
+        setDiscordId("");
         setShowModal(false);
     }
 
@@ -611,14 +688,14 @@ function Mint() {
                     </div>
             </main>
 
-            {/* <Button
+            <Button
                 color="lightBlue"
                 type="button"
                 onClick={(e) => setShowModal(true)}
                 ripple="light"
             >
                 Open small Modal
-            </Button> */}
+            </Button>
 
             <Modal size="md" active={showModal} toggler={() => closeModal()}>
                 <ModalHeader toggler={() => closeModal()}>
@@ -642,6 +719,7 @@ function Mint() {
                                             onChange={(e) => setFirstName(e.target.value)}
                                             className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                         />
+                                        { firstName || firstNameStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your first name</p> }                                        
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3">
@@ -657,6 +735,42 @@ function Mint() {
                                             onChange={(e) => setLastName(e.target.value)}
                                             className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                         />
+                                        { lastName || lastNameStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your last name</p> }                                        
+                                    </div>
+
+                                    <div className="col-span-6">
+                                        <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
+                                            Email
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="street-address"
+                                            id="street-address"
+                                            autoComplete="street-address"
+                                            value={email}
+                                            onChange={(e) => {
+                                                setEmail(e.target.value);
+                                                let lastAtPos = email.lastIndexOf("@");
+                                                let lastDotPos = email.lastIndexOf(".");
+                                        
+                                                if (
+                                                !(
+                                                    lastAtPos < lastDotPos &&
+                                                    lastAtPos > 0 &&
+                                                    email.indexOf("@@") == -1 &&
+                                                    lastDotPos > 2 &&
+                                                    email.length - lastDotPos > 2
+                                                )
+                                                ) { 
+                                                    setEmailCheck(false);
+                                                } else {
+                                                    setEmailCheck(true);
+                                                }
+                                            }}
+                                            className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        />
+                                        { email || emailStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your email</p> }
+                                        { email && emailCheck === false ? <p className="text-red-500 text-xs password validation-txt">Your email is invalid</p> : null }
                                     </div>
 
                                     <div className="col-span-6">
@@ -672,10 +786,26 @@ function Mint() {
                                             onChange={(e) => setWalletAddress(e.target.value)}
                                             className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                         />
-                                        {/* <p className="text-red-500 text-xs password">Please insert a password.</p> */}
+                                        { walletAddress || walletAddressStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your wallet address</p> }
                                     </div>
 
-                                    <div className="col-span-6 sm:col-span-3">
+                                    <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                                        <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                                            Discord
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="city"
+                                            id="city"
+                                            autoComplete="address-level2"
+                                            value={discordId}
+                                            onChange={(e) => setDiscordId(e.target.value)}
+                                            className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        />
+                                        {/* { discordId || discordIdStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your discord id</p> }                                         */}
+                                    </div>
+
+                                    <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                                         <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                             Country
                                         </label>
@@ -936,7 +1066,7 @@ function Mint() {
                                         </select>
                                     </div>
 
-                                    <div className="col-span-6 sm:col-span-6 lg:col-span-3">
+                                    <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                                         <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                                             City/Municipality
                                         </label>
@@ -949,7 +1079,10 @@ function Mint() {
                                             onChange={(e) => setCity(e.target.value)}
                                             className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                         />
+                                        { city || cityStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your city name</p> }                                        
                                     </div>
+
+                                    
 
                                     <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                                         <label htmlFor="region" className="block text-sm font-medium text-gray-700">
@@ -964,6 +1097,7 @@ function Mint() {
                                             onChange={(e) => setProvince(e.target.value)}
                                             className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                         />
+                                        { province || provinceStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your province name</p> }                                        
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -979,6 +1113,7 @@ function Mint() {
                                             onChange={(e) => setPostalCode(e.target.value)}
                                             className="modal-input mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                         />
+                                        { postalCode || postalCodeStatus === true ? null :  <p className="text-red-500 text-xs password validation-txt">Please insert your postal code</p> }                                        
                                     </div>
                                     <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                                         <label htmlFor="postal-code" className="block text-sm font-medium text-gray-700">
