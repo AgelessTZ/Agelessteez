@@ -432,7 +432,7 @@ function Mint() {
             validation = false;
         }
         
-        if (validation) { console.log("here")            
+        if (validation) {            
             let result = await insertUserData({variables: {
                 mintToken: '', firstName, lastName, email, walletAddress, discordId, country, city, province, postalCode, clothingSize
             }});
@@ -688,14 +688,14 @@ function Mint() {
                     </div>
             </main>
 
-            <Button
+            {/* <Button
                 color="lightBlue"
                 type="button"
                 onClick={(e) => setShowModal(true)}
                 ripple="light"
             >
                 Open small Modal
-            </Button>
+            </Button> */}
 
             <Modal size="md" active={showModal} toggler={() => closeModal()}>
                 <ModalHeader toggler={() => closeModal()}>
